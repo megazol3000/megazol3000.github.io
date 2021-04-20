@@ -1,0 +1,18 @@
+footer {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 65px;
+    -webkit-box-flex: 0;
+            flex: 0 0 auto;
+    bottom: 0;
+    font-size: 26px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+}
+.footer-links {
+        display: none;
+        padding-left: 22px;
+}

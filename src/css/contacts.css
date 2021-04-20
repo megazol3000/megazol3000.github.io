@@ -1,0 +1,28 @@
+.contacts a, .contacts h2, .contacts p, .contacts li {
+    color: #000;
+    font-size: 24px;
+}
+.contacts-telephone, .contacts li {
+    margin-bottom: 40px;
+}
+.contacts p {
+    margin-bottom: 0;
+    margin-left: -5px;
+}
+.contacts h2 {
+    margin-bottom: 5px;
+}
+.contacts-adress ul li {
+    color: #d71b18;
+}
+.contacts-adress ul {
+    padding-left: 20px;
+}
+.contacts-telephone_item {
+    display: flex;
+    flex-wrap: wrap;
+}
+.map-wrapper {
+    height: 650px;
+    width: 100%;
+}

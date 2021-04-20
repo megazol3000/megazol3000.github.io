@@ -1,0 +1,110 @@
+.bread-crumbs a {
+    color: #000;
+    font-size: 18px;
+    
+}
+.bread-crumbs {
+    margin-bottom: 30px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+.underline span {
+    text-decoration: none;
+}
+
+.teachers-hero {
+    margin-top: 25px;
+}
+.teachers-hero h1 {
+    margin-bottom: 40px;
+}
+
+.card-img img {
+    width: 260px;
+    height: auto;
+}
+
+.card-img {
+    overflow: hidden;
+    width: 260px;
+    height: 270px;
+    margin-bottom: 10px;
+}
+
+.teacher-card {
+    margin-bottom: 40px;
+    margin-right: 35px;
+}
+
+.teacher-card span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.teacher-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.teachers-cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.teacher-card {
+    color: #000;
+}
+
+.teacher-block {
+    display: flex;
+    margin-bottom: 50px;
+}
+.teacher-info {
+    background-color: #dadada;
+    min-width: 270px;
+    height: 470px;
+    margin-right: 30px;
+}
+.teacher-info__text {
+    padding: 15px;
+    font-size: 24px;
+    font-weight: normal;
+}
+.teacher-info__text .position {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.teacher-info__img {
+    width: 100%;
+}
+.teacher-info__img img{
+    width: 100%;
+}
+
+.teacher-text {
+    font-size: 24px;
+}
+.teacher-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+.teacher-gallery__item {
+    height: 200px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .teachers-cards {justify-content: center;}
+    .teacher-block {flex-direction: column;}
+    .teacher-info {margin-right: 0; width: 70%; height: inherit; margin-bottom: 20px; align-self: center}
+    .teacher-gallery {justify-content: center;}
+    .teacher-gallery__item {margin-right: 0;}
+    .teacher-card {margin-right: 0;}
+}

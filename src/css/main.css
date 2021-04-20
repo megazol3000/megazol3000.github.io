@@ -1,0 +1,100 @@
+@import url("fonts.css");
+@import url("../libs/bootstrap-grid.min.css");
+@import url("header.css");
+@import url("footer.css");
+@import url("index.css");
+@import url("media.css");
+@import url("teachers.css");
+@import url("what.css");
+@import url("contacts.css");
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'DIN Pro Cond', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+}
+
+main {
+    -webkit-box-flex: 1;
+            flex: 1 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+h1 {
+    display: inline-block;
+    font-size: 48px;
+    font-weight: bold;
+    border-bottom: 7px solid #d71b18;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.menu li:hover .sub-menu{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+}
+
+.menu li:hover>a {
+    color: #d71b18;
+}
+.sub-menu li:hover a{
+    color: #d71b18;
+}
+@media (min-width: 820px) {
+    .mobile-menu {display: none;}
+}
+@media (max-width: 820px) {
+    .menu {display: none;}
+    .sub-menu.open{
+        display: flex;
+        flex-direction: column;
+        line-height: 13px;
+        text-align: left;
+        position: initial;
+        font-size: 20px;
+    }
+    .sub-menu.open li {
+        background: none;
+    }
+    .mobile-active-menu {
+        box-sizing: border-box;
+        background: #d71b18 !important;
+    }
+
+    .sub-menu li:hover {
+        background: #d71b18;
+    }
+    .sub-menu li:hover a {
+        color: #fff;
+    }
+    .menu li:hover .sub-menu{
+        display: none;
+    }
+
+}
+
