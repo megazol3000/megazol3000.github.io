@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Проверка штрафов Грузии</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <div class="header">
+    <h1>
+      <i class="fas fa-car-side"></i> Штрафы Грузии
+    </h1>
+    <p>Проверка по российскому номеру (латиница, без RUS)</p>
+  </div>
+
+  <form id="searchForm" autocomplete="off">
+    <div class="input-label">
+      <span><i class="fas fa-flag" style="margin-right: 6px; color: #1d7cf0;"></i> Номер авто</span>
+      <span class="hint"><i class="far fa-keyboard"></i> A123BC123 или A123BC12</span>
+    </div>
+
+    <div class="input-wrapper">
+      <input type="text" id="plateInput" 
+             placeholder="Напр. A123BC123" 
+             maxlength="12"
+             value=""
+             aria-label="Введите номер автомобиля">
+      <div class="input-hint">
+        <i class="fas fa-info-circle"></i> Формат: 1 буква + 3 цифры + 2 буквы + 2–3 цифры (регион)
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="btn btn-primary" id="searchBtn">
+        <i class="fas fa-search"></i> Поиск
+      </button>
+      <button type="reset" class="btn btn-secondary" id="clearBtn">
+        <i class="fas fa-undo-alt"></i> Очистить
+      </button>
+    </div>
+
+    <div id="statusMessage" class="status-message">
+      <i class="fas fa-circle-check"></i>
+      <span id="statusText">Введите номер и нажмите «Поиск»</span>
+    </div>
+
+    <div class="pay-section" id="paySection">
+      <button class="btn-pay" id="payBtn">
+        <i class="fas fa-credit-card"></i> Оплатить штраф
+      </button>
+    </div>
+  </form>
+</div>
+
+<!-- ФУТЕР -->
+<footer class="footer">
+  <button class="messenger-btn tg" id="tgBtn" aria-label="Telegram">
+    <i class="fab fa-telegram-plane"></i>
+  </button>
+  <button class="messenger-btn wapp" id="wappBtn" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </button>
+  <button class="messenger-btn max" id="maxBtn" aria-label="MAX">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_MAX.svg/1280px-%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_MAX.svg.png" 
+         alt="MAX" 
+         class="max-logo">
+  </button>
+</footer>
+
+<!-- МОДАЛЬНОЕ ОКНО -->
+<div class="modal-overlay" id="feedbackModal">
+  <div class="modal">
+    <button class="modal-close" id="modalCloseBtn" aria-label="Закрыть">
+      <i class="fas fa-times"></i>
+    </button>
+    <h2><i class="fas fa-pen-fancy"></i> Оплата штрафа</h2>
+    <p class="sub">Заполните форму, и мы поможем оплатить штраф</p>
+
+    <form id="feedbackForm" novalidate>
+      <div class="field" id="nameField">
+        <label>Имя <span class="required">*</span></label>
+        <input type="text" id="feedbackName" placeholder="Ваше имя" required>
+        <div class="error-hint">Пожалуйста, укажите имя</div>
+      </div>
+
+      <div class="field" id="phoneField">
+        <label>Телефон <span class="required">*</span></label>
+        <input type="tel" id="feedbackPhone" placeholder="+7 999 123-45-67" required>
+        <div class="error-hint">Введите номер телефона</div>
+      </div>
+
+      <div class="field">
+        <label>Email</label>
+        <input type="email" id="feedbackEmail" placeholder="example@mail.ru">
+      </div>
+
+      <div class="field">
+        <label>Комментарий</label>
+        <textarea id="feedbackComment" placeholder="Укажите номер авто и детали..."></textarea>
+      </div>
+
+      <div class="actions-row">
+        <button type="button" class="btn btn-secondary" id="modalCancelBtn">Отмена</button>
+        <button type="submit" class="btn btn-primary" id="modalSubmitBtn">
+          <i class="fas fa-paper-plane"></i> Отправить
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
